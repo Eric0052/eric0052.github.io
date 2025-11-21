@@ -14,12 +14,21 @@
     const toggleBtn = document.querySelector("[data-theme-toggle]");
     if (!toggleBtn) return;
 
-    toggleBtn.textContent = initial === "dark" ? "Light ⭑" : "Dark ⭑";
+    const label = toggleBtn.querySelector(".theme-label");
+
+    function syncButton(theme) {
+      toggleBtn.dataset.themeState = theme;
+      if (label) {
+        label.textContent = theme === "dark" ? "Dark" : "Light";
+      }
+    }
+
+    syncButton(initial);
 
     toggleBtn.addEventListener("click", () => {
       const next = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
       applyTheme(next);
-      toggleBtn.textContent = next === "dark" ? "Light ⭑" : "Dark ⭑";
+      syncButton(next);
       localStorage.setItem(THEME_KEY, next);
     });
   }

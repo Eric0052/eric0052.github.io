@@ -66,12 +66,16 @@ header.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem 1.5rem;
   background: var(--bg-soft);
   border: 1px solid var(--border);
   border-radius: 26px;
   box-shadow: var(--shadow);
+  position: sticky;
+  top: 1rem;
+  backdrop-filter: blur(12px);
+  z-index: 10;
 }
 
 .nav-links {
@@ -95,19 +99,58 @@ header.navbar {
 }
 
 .theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   border: 1px solid var(--border);
-  background: var(--bg-soft);
+  background: var(--bg);
   color: var(--text);
   border-radius: 999px;
-  padding: 0.4rem 1rem;
+  padding: 0.35rem 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), border var(--transition);
+  transition: background var(--transition), color var(--transition), border var(--transition), box-shadow var(--transition);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(60, 122, 227, 0.25);
+}
+
+.theme-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+}
+
+.theme-icon svg {
+  position: absolute;
+  inset: 0;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.theme-toggle[data-theme-state="light"] .icon-sun,
+.theme-toggle[data-theme-state="dark"] .icon-moon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.theme-toggle[data-theme-state="light"] .icon-moon {
+  transform: rotate(-12deg) scale(0.8);
+}
+
+.theme-toggle[data-theme-state="dark"] .icon-sun {
+  transform: rotate(12deg) scale(0.8);
+}
+
+.theme-label {
+  font-size: 0.9rem;
 }
 
 /* Hero / Profile */
@@ -167,16 +210,6 @@ header.navbar {
 .section h2 {
   font-size: 1.6rem;
   margin-bottom: 1.25rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.section h2::after {
-  content: "";
-  height: 1px;
-  width: 80px;
-  background: var(--border);
 }
 
 .card-grid {
@@ -337,14 +370,23 @@ body[data-theme="dark"] .blog-content pre {
   box-shadow: var(--shadow);
 }
 
-.section-highlight h2 {
-  font-size: 1.8rem;
-  letter-spacing: -0.3px;
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 20px;
+  border: 1px solid rgba(60, 122, 227, 0.16);
+  background: linear-gradient(120deg, rgba(60, 122, 227, 0.12), rgba(60, 122, 227, 0.02));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  margin-bottom: 1.5rem;
 }
 
-.section-highlight h2::after {
-  width: 120px;
-  background: linear-gradient(90deg, var(--accent), transparent);
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.7rem;
+  letter-spacing: -0.3px;
 }
 
 /* Responsive */
