@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "openbench",
+      "title": "OpenBench · Trustworthy AI Benchmarking",
+      "year": 2024,
+      "venue": "Community",
+      "file": "content/projects/openbench.md"
+    },
+    {
+      "id": "biocell",
+      "title": "BioCell-1K · Foundation Models for Microscopy",
+      "year": 2023,
+      "venue": "Collaboration",
+      "file": "content/projects/biocell.md"
+    }
+  ]
+}
+

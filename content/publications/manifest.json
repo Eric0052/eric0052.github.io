@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "graph-cert",
+      "title": "Adaptive Certificates for Graph Robustness",
+      "authors": "A. Lin*, B. Ortega, S. Gupta",
+      "venue": "ICML 2025",
+      "year": 2025,
+      "file": "content/publications/graph-cert.md"
+    },
+    {
+      "id": "diffusion-physics",
+      "title": "Physics-guided Diffusion for Scientific Simulation",
+      "authors": "A. Lin, L. Zhou, C. P. Martin",
+      "venue": "NeurIPS 2024 (Spotlight)",
+      "year": 2024,
+      "file": "content/publications/diffusion-physics.md"
+    }
+  ]
+}
+

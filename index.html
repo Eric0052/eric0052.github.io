@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS Researcher · Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="https://unpkg.com/feather-icons"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script defer src="assets/script.js"></script>
+  </head>
+  <body data-theme="light" data-page="home">
+    <div class="page-wrapper">
+      <header class="navbar">
+        <div class="logo">
+          <strong>CS Researcher</strong>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="publications.html">Publications & Projects</a>
+          <a href="blog.html">Blog</a>
+          <a href="cv.html">CV</a>
+          <button class="theme-toggle" data-theme-toggle>Dark ⭑</button>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div class="avatar">
+          <img src="assets/avatar.jpg" alt="Profile portrait" />
+        </div>
+        <div class="hero-content">
+          <h1>Dr. Ada Lin</h1>
+          <p>
+            I am a final-year Ph.D. candidate at the School of Computer Science, focusing on robust machine learning, trustworthy AI,
+            and efficient systems for large-scale scientific discovery.
+          </p>
+          <div class="quick-meta">
+            <div class="meta-item">
+              <i data-feather="map-pin"></i>
+              <span>Cambridge, MA</span>
+            </div>
+            <div class="meta-item">
+              <i data-feather="layers"></i>
+              <span>Institute of Computation & Intelligence</span>
+            </div>
+            <div class="meta-item">
+              <i data-feather="mail"></i>
+              <a href="mailto:ada.lin@research.ai">ada.lin@research.ai</a>
+            </div>
+            <div class="meta-item">
+              <i data-feather="github"></i>
+              <a href="https://github.com/example" target="_blank" rel="noopener">github.com/example</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>About</h2>
+        <p>
+          My research bridges optimization, trustworthy ML, and open-source systems. Currently I explore how structured priors and
+          causal views of data can yield robust models that remain reliable in deployment. I enjoy designing lightweight academic
+          software, mentoring, and building communities around reproducible science.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Research Highlights</h2>
+        <div class="card-grid">
+          <article class="card">
+            <span class="chip">2025</span>
+            <h3>Adaptive Certifiable Robustness</h3>
+            <p>New certificates for graph neural networks under topology shifts; oral at ICML.</p>
+          </article>
+          <article class="card">
+            <span class="chip">2024</span>
+            <h3>OpenBench</h3>
+            <p>Community benchmark suite for trustworthy AI systems, 3k+ weekly users.</p>
+          </article>
+          <article class="card">
+            <span class="chip">2023</span>
+            <h3>Physics-guided Diffusion</h3>
+            <p>Joint work with CERN on accelerating simulation pipelines via controllable diffusion.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Currently</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Advising</h3>
+            <p>Mentoring 3 MSc researchers on scalable uncertainty estimation.</p>
+          </article>
+          <article class="card">
+            <h3>Service</h3>
+            <p>Reviewer for NeurIPS, TPAMI, and DistSys Journal; co-organizing Trustworthy AI workshop.</p>
+          </article>
+          <article class="card">
+            <h3>Collaborations</h3>
+            <p>Working with BioLab on multi-modal foundation models for cell imaging.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
+
