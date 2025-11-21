@@ -8,8 +8,7 @@
 
   function initThemeToggle() {
     const saved = localStorage.getItem(THEME_KEY);
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const initial = saved || (prefersDark ? "dark" : "light");
+    const initial = saved || "light";
     applyTheme(initial);
 
     const toggleBtn = document.querySelector("[data-theme-toggle]");
