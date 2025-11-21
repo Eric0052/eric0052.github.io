@@ -6,6 +6,7 @@
   --muted: #5e6475;
   --accent: #4a72d8;
   --border: #e0e5f0;
+  --divider: linear-gradient(90deg, rgba(0, 0, 0, 0), #cccccc 18%, #cccccc 82%, rgba(0, 0, 0, 0));
   --shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
   --transition: 200ms ease;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -18,8 +19,9 @@ body[data-theme="dark"] {
   --bg-soft: #18191f;
   --text: #f2f2f4;
   --muted: #9c9fb4;
-  --accent: #9fb4ff;
-  --border: rgba(255, 255, 255, 0.15);
+  --accent: #a8bbff;
+  --border: rgba(255, 255, 255, 0.16);
+  --divider: linear-gradient(90deg, rgba(0, 0, 0, 0), #3f4047 18%, #3f4047 82%, rgba(0, 0, 0, 0));
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
   background: var(--bg);
   color: var(--text);
@@ -59,7 +61,7 @@ a:focus-visible {
 .page-wrapper {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2rem 1.5rem 3rem;
 }
 
 header.navbar {
@@ -67,9 +69,24 @@ header.navbar {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.2rem 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 2.2rem;
+  padding: 0.9rem 0;
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+body[data-page="publications"] header.navbar,
+body[data-page="blog"] header.navbar {
+  margin-bottom: 1rem;
+}
+
+header.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--divider);
 }
 
 .nav-links {
@@ -196,14 +213,41 @@ header.navbar {
 }
 
 .section {
-  margin-top: 3rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid transparent;
+  position: relative;
+  margin-top: 1.8rem;
+  padding: 1.25rem 0 1.5rem;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: var(--divider);
 }
 
 .section h2 {
   font-size: 1.6rem;
   margin-bottom: 1.25rem;
+}
+
+.section:first-of-type {
+  margin-top: 1.5rem;
+  padding-top: 0;
+}
+
+.section:first-of-type::before {
+  content: none;
+}
+
+.section + .section {
+  margin-top: 1.4rem;
+}
+
+.section:last-of-type {
+  padding-bottom: 0.5rem;
 }
 
 .card-grid {
