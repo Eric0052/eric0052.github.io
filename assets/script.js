@@ -48,6 +48,51 @@
     return res.text();
   }
 
+  async function renderPublicationsList(manifestPath, targetId) {
+    const container = document.getElementById(targetId);
+    if (!container) return;
+    try {
+      const manifest = await fetch(manifestPath).then((r) => r.json());
+      const grouped = groupByYear(manifest.items || []);
+
+      container.innerHTML = Object.keys(grouped)
+        .sort((a, b) => Number(b) - Number(a))
+        .map((year) => {
+          const entries = grouped[year];
+          const entryMarkup = entries
+            .map(
+              (entry) => {
+                let linksHtml = "";
+                if (entry.links) {
+                  const linkItems = [];
+                  if (entry.links.paper) linkItems.push(`<a href="${entry.links.paper}" target="_blank" rel="noopener">Paper</a>`);
+                  if (entry.links.arxiv) linkItems.push(`<a href="${entry.links.arxiv}" target="_blank" rel="noopener">arXiv</a>`);
+                  if (entry.links.code) linkItems.push(`<a href="${entry.links.code}" target="_blank" rel="noopener">Code</a>`);
+                  if (entry.links.project) linkItems.push(`<a href="${entry.links.project}" target="_blank" rel="noopener">Project</a>`);
+                  if (linkItems.length > 0) {
+                    linksHtml = `<div class="publication-links">${linkItems.join(" · ")}</div>`;
+                  }
+                }
+                return `
+              <article class="list-item">
+                <div class="meta"><span class="year-badge">${year}</span>${entry.venue || ""}</div>
+                <h3>${entry.title}</h3>
+                <p>${entry.authors || ""}</p>
+                ${linksHtml}
+              </article>
+            `;
+              }
+            )
+            .join("");
+          return `<section><h3>${year}</h3><div class="list-group">${entryMarkup}</div></section>`;
+        })
+        .join("");
+    } catch (error) {
+      container.innerHTML = `<p class="meta">Unable to load content: ${error.message}</p>`;
+      console.error(error);
+    }
+  }
+
   async function renderMarkdownList(manifestPath, targetId) {
     const container = document.getElementById(targetId);
     if (!container) return;
@@ -151,7 +196,7 @@
 
     switch (page) {
       case "publications":
-        renderMarkdownList("content/publications/manifest.json", "publications-list");
+        renderPublicationsList("content/publications/manifest.json", "publications-list");
         renderMarkdownList("content/projects/manifest.json", "projects-list");
         break;
       case "blog":

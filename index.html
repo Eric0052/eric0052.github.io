@@ -47,27 +47,30 @@
           <img src="assets/avatar.jpg" alt="Profile portrait" />
         </div>
         <div class="hero-content">
-          <h1>Dr. Ada Lin</h1>
+          <h1>Xiyu Zhou</h1>
           <p>
-            I am a final-year Ph.D. candidate at the School of Computer Science, focusing on robust machine learning, trustworthy AI,
-            and efficient systems for large-scale scientific discovery.
+            I am a Master's student in Software Engineering at Wuhan University, focusing on AI for Software Engineering (AI4SE).
           </p>
           <div class="quick-meta">
             <div class="meta-item">
               <i data-feather="map-pin"></i>
-              <span>Cambridge, MA</span>
+              <span>Wuhan, China</span>
             </div>
             <div class="meta-item">
               <i data-feather="layers"></i>
-              <span>Institute of Computation & Intelligence</span>
+              <span>Wuhan University</span>
             </div>
             <div class="meta-item">
               <i data-feather="mail"></i>
-              <a href="mailto:ada.lin@research.ai">ada.lin@research.ai</a>
+              <a href="xiyuzhou@whu.edu.cn">xiyuzhou@whu.edu.cn</a>
             </div>
             <div class="meta-item">
               <i data-feather="github"></i>
-              <a href="https://github.com/example" target="_blank" rel="noopener">github.com/example</a>
+              <a href="https://github.com/eric0052" target="_blank" rel="noopener">github.com/eric0052</a>
+            </div>
+            <div class="meta-item">
+              <i data-feather="book-open"></i>
+              <a href="https://scholar.google.com/citations?user=example" target="_blank" rel="noopener">Google Scholar</a>
             </div>
           </div>
         </div>
@@ -75,31 +78,57 @@
 
       <section class="section">
         <h2>About</h2>
-        <p>
-          My research bridges optimization, trustworthy ML, and open-source systems. Currently I explore how structured priors and
-          causal views of data can yield robust models that remain reliable in deployment. I enjoy designing lightweight academic
-          software, mentoring, and building communities around reproducible science.
-        </p>
+        <p> 
+            My research focuses on applying <strong>large language models (LLMs)</strong> to software engineering, combining advanced techniques such as <strong>RAG</strong>, <strong>LLM-based agents</strong>, <strong>prompt engineering</strong>, <strong>tool-augmented reasoning</strong>, <strong>PEFT</strong>, and <strong>dataset construction and evaluation</strong>. I combine these approaches with <strong>empirical studies</strong> on real-world datasets from <strong>GitHub</strong> and <strong>Stack Overflow</strong>, exploring how AI can effectively support developers, improve software architecture decisions, and enhance productivity.<br><br>
+            
+            I am particularly interested in:<br>
+            • <strong>AI-assisted software development:</strong> helping developers work more efficiently and effectively.<br>
+            • <strong>AI-assisted software architecture design:</strong> supporting architectural decision-making and recovering missing or implicit design rationale.<br>
+            • <strong>AI-assisted program repair:</strong> detecting, localizing, and repairing software defects.<br><br>
+            
+            Beyond research, I enjoy hands-on engineering and have experience building <strong>data pipelines</strong>, developing <strong>prototypes with Python and Go</strong>, and deploying <strong>full-stack applications</strong>, bridging AI research with practical software engineering.
+            </p>
       </section>
 
       <section class="section">
-        <h2>Research Highlights</h2>
+        <h2>Research Projects</h2>
         <div class="card-grid">
-          <article class="card">
-            <span class="chip">2025</span>
-            <h3>Adaptive Certifiable Robustness</h3>
-            <p>New certificates for graph neural networks under topology shifts; oral at ICML.</p>
-          </article>
-          <article class="card">
-            <span class="chip">2024</span>
-            <h3>OpenBench</h3>
-            <p>Community benchmark suite for trustworthy AI systems, 3k+ weekly users.</p>
-          </article>
-          <article class="card">
-            <span class="chip">2023</span>
-            <h3>Physics-guided Diffusion</h3>
-            <p>Joint work with CERN on accelerating simulation pipelines via controllable diffusion.</p>
-          </article>
+            <article class="card">
+                <span class="chip">2025</span>
+                <h3>Using LLMs in Generating Design Rationale for Software Architecture Decisions</h3>
+                <p>Evaluated LLMs—including zero-shot, chain-of-thought (CoT), and LLM-based agents—for generating and recovering design rationale in software architecture.</p>
+                <p><strong>Status:</strong> 2nd review at <strong>TOSEM</strong>. <a href="https://arxiv.org/abs/2504.20781v2" target="_blank">arXiv:2504.20781v2</a></p>
+            </article>         
+            <article class="card">
+                <span class="chip">2025</span>
+                <h3>Exploring the Problems, Causes, and Solutions of AI Pair Programming</h3>
+                <p>Empirical study of GitHub and Stack Overflow data to analyze issues developers face with GitHub Copilot, their causes, and practical solutions.</p>
+                <p>Published in <strong>JSS 2025</strong>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0164121224002486" target="_blank">ScienceDirect Link</a></p>
+            </article>
+            <article class="card">
+                <span class="chip">2025</span>
+                <h3>MAAD: Automating Software Architecture Design</h3>
+                <p>Knowledge-driven multi-agent framework that collaborates to interpret requirements and generate architectural designs with structured evaluation.</p>
+                <p>Preprint on arXiv. <a href="https://arxiv.org/abs/2507.21382v1" target="_blank">arXiv:2507.21382v1</a></p>
+            </article>
+            <article class="card">
+                <span class="chip">2024</span>
+                <h3>PEFT for Code Smell Detection</h3>
+                <p>Comprehensive evaluation of PEFT techniques on SLMs and LLMs for detecting multiple types of code smells, showing efficient and competitive performance.</p>
+                <p>2nd review at <strong>TOSEM</strong>. <a href="https://arxiv.org/abs/2412.13801" target="_blank">arXiv:2412.13801</a></p>
+            </article>
+            <article class="card">
+                <span class="chip">2023</span>
+                <h3>Practices and Challenges of Using GitHub Copilot</h3>
+                <p>Empirical study of real-world Copilot usage across Stack Overflow and GitHub Discussions, identifying its practical benefits, limitations, and developer challenges.</p>
+                <p><strong>Best Paper</strong> at SEKE 2023. <a href="https://ksiresearchorg.ipage.com/seke/seke23paper/paper077.pdf" target="_blank">PDF</a></p>
+            </article>
+            <article class="card">
+                <span class="chip">2023</span>
+                <h3>Demystifying Practices, Challenges and Expected Features of Using GitHub Copilot</h3>
+                <p>Comprehensive empirical study analyzing practitioners’ real-world experiences, challenges, and desired features when using GitHub Copilot across Stack Overflow and GitHub Discussions.</p>
+                <p>Published in <strong>IJSEKE 2023</strong>. <a href="https://www.worldscientific.com/doi/10.1142/S0218194023410048" target="_blank">DOI</a></p>
+            </article>
         </div>
       </section>
 
@@ -107,16 +136,12 @@
         <h2>Currently</h2>
         <div class="card-grid">
           <article class="card">
-            <h3>Advising</h3>
-            <p>Mentoring 3 MSc researchers on scalable uncertainty estimation.</p>
-          </article>
-          <article class="card">
-            <h3>Service</h3>
-            <p>Reviewer for NeurIPS, TPAMI, and DistSys Journal; co-organizing Trustworthy AI workshop.</p>
-          </article>
-          <article class="card">
-            <h3>Collaborations</h3>
-            <p>Working with BioLab on multi-modal foundation models for cell imaging.</p>
+            <h3>Research</h3>
+            <p>
+                I feel happy and motivated as a Graduate researcher at the <strong>Architecture Research Group</strong>, Wuhan University, supervised by 
+                <a href="https://scholar.google.com/citations?user=76CoujsAAAAJ&amp;hl=en" target="_blank">Prof. Liang Peng</a>.
+              </a>.
+            </p>
           </article>
         </div>
       </section>
