@@ -165,7 +165,7 @@
           <article class="post-card" data-file="${post.file}">
             <p class="meta">${post.date}</p>
             <h4>${post.title}</h4>
-            <p>${post.summary}</p>
+            ${post.summary ? `<p>${post.summary}</p>` : ''}
           </article>
         `;
       }).join("");
@@ -197,7 +197,8 @@
     switch (page) {
       case "publications":
         renderPublicationsList("content/publications/manifest.json", "publications-list");
-        renderMarkdownList("content/projects/manifest.json", "projects-list");
+        // Projects view temporarily disabled per request
+        // renderMarkdownList("content/projects/manifest.json", "projects-list");
         break;
       case "blog":
         renderBlog();
