@@ -486,3 +486,21 @@ body[data-theme="dark"] .blog-content pre {
   }
 }
 
+.blog-content {
+  overflow-wrap: break-word; /* 自动换行 */
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.blog-content pre, 
+.blog-content code {
+  white-space: pre-wrap; /* code block 自动换行 */
+  word-wrap: break-word;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+
