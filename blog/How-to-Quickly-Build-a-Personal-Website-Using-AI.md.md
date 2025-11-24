@@ -1,8 +1,12 @@
+---
+layout: none
+---
+
 # How to Quickly Build a Personal Website Using AI  
 *— My One-Evening Journey with Cursor + ChatGPT*
 
 ## Introduction: Why I Wrote This
-Recently, I built my entire personal website in just **one evening** with the help of **Cursor** and **ChatGPT**. The site includes the typical sections you’d expect—**Home**, **Publications & Projects**, **Blog**, and **CV**. More importantly, the Publications/Projects and Blog pages are designed so that I can easily add new content by simply dropping in `.md` files, without touching any frontend code.
+Recently, I built my entire personal website in just **one evening** with the help of **Cursor** and **ChatGPT**. This site includes the typical sections you’d expect—**Home**, **Publications & Projects**, **Blog**, and **CV**. More importantly, the Publications/Projects and Blog pages are designed so that I can easily add new content by simply dropping in `.md` files, without touching any frontend code.
 
 This experience genuinely amazed me. For the first time, AI wasn’t just generating code snippets—it was **acting as a full front-end engineer**, helping me build a clean, functional, extensible website from scratch. It felt like the moment AI stopped being “a cool demo” and truly became **productive power**.
 
