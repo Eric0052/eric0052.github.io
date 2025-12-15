@@ -51,39 +51,72 @@
   async function renderPublicationsList(manifestPath, targetId) {
     const container = document.getElementById(targetId);
     if (!container) return;
+  
+    // ===== 新增：作者加粗函数 =====
+    function renderAuthors(authors) {
+      const highlightName = "Xiyu Zhou"; // 这里改成你要高亮的名字
+      return authors
+        .split(",")
+        .map(a => {
+          const name = a.trim();
+          return name === highlightName
+            ? `<strong>${name}</strong>` // 加粗高亮
+            : name;
+        })
+        .join(", ");
+    }
+  
+    // ===== 新增：status badge渲染函数 =====
+    function renderStatusBadge(status) {
+      if (!status) return "";
+      return `<span class="status-badge">${status}</span>`; // 你可以在CSS里定义.status-badge样式
+    }
+
+    // ===== 新增：award badge渲染函数 =====
+    function renderAwardBadge(award) {
+      if (!award) return "";
+      return `<span class="award-badge">${award}</span>`; // CSS里定义.award-badge样式
+    }
+  
     try {
       const manifest = await fetch(manifestPath).then((r) => r.json());
       const grouped = groupByYear(manifest.items || []);
-
+  
       container.innerHTML = Object.keys(grouped)
         .sort((a, b) => Number(b) - Number(a))
         .map((year) => {
           const entries = grouped[year];
           const entryMarkup = entries
-            .map(
-              (entry) => {
-                let linksHtml = "";
-                if (entry.links) {
-                  const linkItems = [];
-                  if (entry.links.paper) linkItems.push(`<a href="${entry.links.paper}" target="_blank" rel="noopener">Paper</a>`);
-                  if (entry.links.arxiv) linkItems.push(`<a href="${entry.links.arxiv}" target="_blank" rel="noopener">arXiv</a>`);
-                  if (entry.links.code) linkItems.push(`<a href="${entry.links.code}" target="_blank" rel="noopener">Code</a>`);
-                  if (entry.links.project) linkItems.push(`<a href="${entry.links.project}" target="_blank" rel="noopener">Project</a>`);
-                  if (linkItems.length > 0) {
-                    linksHtml = `<div class="publication-links">${linkItems.join(" · ")}</div>`;
-                  }
+            .map((entry) => {
+              let linksHtml = "";
+              if (entry.links) {
+                const linkItems = [];
+                if (entry.links.paper) linkItems.push(`<a href="${entry.links.paper}" target="_blank" rel="noopener">Paper</a>`);
+                if (entry.links.arxiv) linkItems.push(`<a href="${entry.links.arxiv}" target="_blank" rel="noopener">arXiv</a>`);
+                if (entry.links.code) linkItems.push(`<a href="${entry.links.code}" target="_blank" rel="noopener">Code</a>`);
+                if (entry.links.project) linkItems.push(`<a href="${entry.links.project}" target="_blank" rel="noopener">Project</a>`);
+                if (linkItems.length > 0) {
+                  linksHtml = `<div class="publication-links">${linkItems.join(" · ")}</div>`;
                 }
-                return `
-              <article class="list-item">
-                <div class="meta"><span class="year-badge">${year}</span>${entry.venue || ""}</div>
-                <h3>${entry.title}</h3>
-                <p>${entry.authors || ""}</p>
-                ${linksHtml}
-              </article>
-            `;
               }
-            )
+  
+              // ===== 修改这里 =====
+              return `
+                <article class="list-item">
+                  <div class="meta">
+                    <span class="year-badge">${year}</span>
+                    ${entry.venue || ""}
+                    ${renderStatusBadge(entry.status)} <!-- 添加 status badge -->
+                    ${renderAwardBadge(entry.award)} <!-- 添加 award badge -->
+                  </div>
+                  <h3>${entry.title}</h3>
+                  <p>${renderAuthors(entry.authors)}</p> <!-- 使用作者加粗渲染 -->
+                  ${linksHtml}
+                </article>
+              `;
+            })
             .join("");
+  
           return `<section><h3>${year}</h3><div class="list-group">${entryMarkup}</div></section>`;
         })
         .join("");
@@ -92,7 +125,7 @@
       console.error(error);
     }
   }
-
+  
   async function renderMarkdownList(manifestPath, targetId) {
     const container = document.getElementById(targetId);
     if (!container) return;

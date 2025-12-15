@@ -6,9 +6,9 @@ layout: none
 *— My One-Evening Journey with Cursor + ChatGPT*
 
 ## Introduction: Why I Wrote This
-Recently, I built my entire personal website in just **one evening** with the help of **Cursor** and **ChatGPT**. This site includes the typical sections you’d expect—**Home**, **Publications & Projects**, **Blog**, and **CV**. More importantly, the Publications/Projects and Blog pages are designed so that I can easily add new content by simply dropping in `.md` files, without touching any frontend code.
+Recently, I built my entire personal website in just **one evening** with the help of **Cursor** and **ChatGPT**. This personal page includes the typical sections you’d expect—**Home**, **Publications & Projects**, **Blog**, and **CV**. The Publications/Projects and Blog pages are designed to easily add new content by simply dropping in `.md` files, without editing any frontend code.
 
-This experience genuinely amazed me. For the first time, AI wasn’t just generating code snippets—it was **acting as a full front-end engineer**, helping me build a clean, functional, extensible website from scratch. It felt like the moment AI stopped being “a cool demo” and truly became **productive power**.
+This experience amazed me. For the first time, AI wasn’t just generating code snippets—it was **acting as a full front-end engineer**.
 
 That’s why I decided to make this topic—*“How to Quickly Build a Personal Website Using AI”*—the very first blog post on my new site.
 
@@ -17,10 +17,10 @@ That’s why I decided to make this topic—*“How to Quickly Build a Personal 
 ## 1. Prerequisites  
 You only need three things:
 
-1. **A GitHub account** — used later to deploy the site  
-2. **A Cursor account with the app installed**  
+1. **A GitHub account** — used later to deploy the personal page  
+2. **Cursor**  
 3. **A powerful LLM for web design guidance** (e.g., ChatGPT)  
-   - Optional, because Cursor’s built-in ASK mode is already good  
+   - Optional, because Cursor’s built-in "ask" mode is already amazing  
    - But ChatGPT helps refine requirements and avoid design pitfalls
 
 ---
@@ -29,7 +29,7 @@ You only need three things:
 
 Most beginners fail not because they can’t build a site, but because they can’t **describe** what they want clearly.
 
-Before asking Cursor to “generate my website,” you must prepare two types of requirements:
+Before asking Cursor to "generate my website", you must prepare two types of requirements:
 
 ---
 
@@ -61,7 +61,7 @@ This ensures elegance without unnecessary complexity.
 ---
 
 ## 3. Ask ChatGPT to Polish Your Requirements  
-Even if you know what you want, you’re not a frontend engineer. Your requirements are probably vague or inconsistent.
+Even if you know what you want, you’re not a professional frontend engineer. Your requirements are probably vague or inconsistent.
 
 Give your rough ideas to ChatGPT and let it:
 
@@ -158,5 +158,3 @@ Going through this process taught me that:
 > **AI has truly become a productive tool. Even without frontend knowledge, you can build a high-quality, maintainable personal website in one evening.**
 
 If you want a fast, elegant, and extensible personal homepage, this workflow is fully repeatable.
-
-Give it a try—you might be surprised by what AI can help you create.

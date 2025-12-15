@@ -4,17 +4,30 @@
       "id": "tosem-llm-dr",
       "title": "Using LLMs in Generating Design Rationale for Software Architecture Decisions",
       "authors": "Xiyu Zhou, Ruiyin Li, Peng Liang, Beiqi Zhang, Mojtaba Shahin, Zengyang Li, Chen Yang",
-      "venue": "TOSEM 2nd review",
+      "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+      "status": "Accepted for publication",
       "year": 2025,
       "links": {
-        "arxiv": "https://arxiv.org/abs/2504.20781v2"
+        "arxiv": "https://arxiv.org/abs/2504.20781"
+      }
+    },
+    {
+      "id": "exploring",
+      "title": "Exploring the Problems, Causes, and Solutions of AI Pair Programming: A Study on GitHub and Stack Overflow",
+      "authors": "Xiyu Zhou, Peng Liang, Beiqi Zhang, Zengyang Li, Aakash Ahmad, Mojtaba Shahin, Muhammad Waseem",
+      "venue": "Journal of Systems and Software (JSS)",
+      "status": "Published",
+      "year": 2025,
+      "links": {
+        "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0164121224002486"
       }
     },
     {
       "id": "maad",
       "title": "MAAD: Automate Software Architecture Design through Knowledge-Driven Multi-Agent Collaboration",
       "authors": "Ruiyin Li, Yiran Zhang, Xiyu Zhou, Peng Liang, Weisong Sun, Jifeng Xuan, Zhi Jin, Yang Liu",
-      "venue": "arXiv preprint arXiv:2507.21382v1",
+      "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+      "status": "Under Review",
       "year": 2025,
       "links": {
         "arxiv": "https://arxiv.org/abs/2507.21382v1"
@@ -24,7 +37,8 @@
       "id": "peft-code-smell",
       "title": "A Comprehensive Evaluation of Parameter-Efficient Fine-Tuning on Code Smell Detection",
       "authors": "Beiqi Zhang, Peng Liang, Xin Zhou, Xiyu Zhou, David Lo, Qiong Feng, Zengyang Li, Lin Li",
-      "venue": "TOSEM 2nd review",
+      "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+      "status": "Under Review",
       "year": 2025,
       "links": {
         "arxiv": "https://arxiv.org/abs/2412.13801"
@@ -34,8 +48,10 @@
       "id": "copilot-practices-seke",
       "title": "Practices and Challenges of Using GitHub Copilot: An Empirical Study",
       "authors": "Beiqi Zhang, Peng Liang, Xiyu Zhou, Aakash Ahmad, Muhammad Waseem",
-      "venue": "SEKE 2023 Best Paper",
+      "venue": "International Conference on Software Engineering and Knowledge Engineering (SEKE)",
+      "status": "Published",
       "year": 2023,
+      "award": "Best Paper",
       "links": {
         "paper": "https://ksiresearchorg.ipage.com/seke/seke23paper/paper077.pdf"
       }
@@ -44,20 +60,11 @@
       "id": "copilot-demystifying-ijseke",
       "title": "Demystifying Practices, Challenges and Expected Features of Using GitHub Copilot",
       "authors": "Beiqi Zhang, Peng Liang, Xiyu Zhou, Aakash Ahmad, Muhammad Waseem",
-      "venue": "IJSEKE 2023",
+      "venue": "International Journal of Software Engineering and Knowledge Engineering (IJSEKE)",
+      "status": "Published",
       "year": 2023,
       "links": {
         "paper": "https://www.worldscientific.com/doi/10.1142/S0218194023410048"
-      }
-    },
-    {
-      "id": "openbench",
-      "title": "Exploring the Problems, Causes, and Solutions of AI Pair Programming: A Study on GitHub and Stack Overflow",
-      "authors": "Xiyu Zhou, Peng Liang, Beiqi Zhang, Zengyang Li, Aakash Ahmad, Mojtaba Shahin, Muhammad Waseem",
-      "venue": "JSS 2025",
-      "year": 2025,
-      "links": {
-        "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0164121224002486"
       }
     }
   ]
