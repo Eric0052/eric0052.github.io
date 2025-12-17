@@ -104,11 +104,11 @@
               return `
                 <article class="list-item">
                   <div class="meta">
-                    <span class="year-badge">${year}</span>
-                    ${entry.venue || ""}
-                    ${renderStatusBadge(entry.status)} <!-- 添加 status badge -->
-                    ${renderAwardBadge(entry.award)} <!-- 添加 award badge -->
-                  </div>
+                  <span class="year-badge">${year}</span>
+                  <span class="venue">${entry.venue || ""}</span>      <!-- venue 单独 span -->
+                  ${renderStatusBadge(entry.status)}                   <!-- status badge -->
+                  ${renderAwardBadge(entry.award)}                     <!-- award badge -->
+                </div>
                   <h3>${entry.title}</h3>
                   <p>${renderAuthors(entry.authors)}</p> <!-- 使用作者加粗渲染 -->
                   ${linksHtml}

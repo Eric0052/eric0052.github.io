@@ -503,4 +503,40 @@ body[data-theme="dark"] .blog-content pre {
   height: auto;
 }
 
+/* ===== Publications 元信息样式 ===== */
+.list-item .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem; /* 元信息间距 */
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
+/* venue：斜体 + 柔和色调 */
+.list-item .meta .venue {
+  font-style: italic;
+  color: #555; /* 比 status 更低调 */
+}
+
+/* status badge：轻描边，学术风格 */
+.status-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  color: #555;
+  background: transparent;
+}
+
+/* award badge：强调色，突出获奖 */
+.award-badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  background: #f6c453; /* 金色调 */
+  color: #1f1f1f;
+  font-weight: 600;
+}

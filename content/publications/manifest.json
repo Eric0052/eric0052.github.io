@@ -8,7 +8,7 @@
       "status": "Accepted for publication",
       "year": 2025,
       "links": {
-        "arxiv": "https://arxiv.org/abs/2504.20781"
+        "URL": "https://dl.acm.org/doi/10.1145/3785010"
       }
     },
     {
@@ -19,7 +19,7 @@
       "status": "Published",
       "year": 2025,
       "links": {
-        "paper": "https://www.sciencedirect.com/science/article/abs/pii/S0164121224002486"
+        "URL": "https://www.sciencedirect.com/science/article/abs/pii/S0164121224002486"
       }
     },
     {
@@ -30,7 +30,7 @@
       "status": "Under Review",
       "year": 2025,
       "links": {
-        "arxiv": "https://arxiv.org/abs/2507.21382v1"
+        "URL": "https://arxiv.org/abs/2507.21382v1"
       }
     },
     {
@@ -41,7 +41,7 @@
       "status": "Under Review",
       "year": 2025,
       "links": {
-        "arxiv": "https://arxiv.org/abs/2412.13801"
+        "URL": "https://arxiv.org/abs/2412.13801"
       }
     },
     {
@@ -53,7 +53,7 @@
       "year": 2023,
       "award": "Best Paper",
       "links": {
-        "paper": "https://ksiresearchorg.ipage.com/seke/seke23paper/paper077.pdf"
+        "URL": "https://ksiresearchorg.ipage.com/seke/seke23paper/paper077.pdf"
       }
     },
     {
@@ -64,7 +64,7 @@
       "status": "Published",
       "year": 2023,
       "links": {
-        "paper": "https://www.worldscientific.com/doi/10.1142/S0218194023410048"
+        "URL": "https://www.worldscientific.com/doi/10.1142/S0218194023410048"
       }
     }
   ]
