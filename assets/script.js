@@ -91,14 +91,23 @@
               let linksHtml = "";
               if (entry.links) {
                 const linkItems = [];
+
+                // 优先支持原来的类型
                 if (entry.links.paper) linkItems.push(`<a href="${entry.links.paper}" target="_blank" rel="noopener">Paper</a>`);
                 if (entry.links.arxiv) linkItems.push(`<a href="${entry.links.arxiv}" target="_blank" rel="noopener">arXiv</a>`);
                 if (entry.links.code) linkItems.push(`<a href="${entry.links.code}" target="_blank" rel="noopener">Code</a>`);
                 if (entry.links.project) linkItems.push(`<a href="${entry.links.project}" target="_blank" rel="noopener">Project</a>`);
+
+                // 如果都没有，但有 URL，则显示为 Paper
+                if (linkItems.length === 0 && entry.links.URL) {
+                  linkItems.push(`<a href="${entry.links.URL}" target="_blank" rel="noopener">Paper</a>`);
+                }
+
                 if (linkItems.length > 0) {
                   linksHtml = `<div class="publication-links">${linkItems.join(" · ")}</div>`;
                 }
               }
+
   
               // ===== 修改这里 =====
               return `
