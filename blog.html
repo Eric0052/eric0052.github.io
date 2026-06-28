@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="assets/style.css" />
     <script defer src="https://unpkg.com/feather-icons"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["$", "$"], ["\\(", "\\)"]],
+          displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+        }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     <script defer src="assets/script.js"></script>
   </head>
   <body data-theme="light" data-page="blog">
@@ -47,15 +56,53 @@
           <h2>Research Notebook</h2>
         </div>
         <p class="meta">Short reflections on ongoing work, datasets, and service updates.</p>
-        <div class="blog-wrapper">
-          <aside id="blog-list"></aside>
-          <article id="blog-viewer" class="blog-viewer">
-            <h2>Select a post</h2>
-            <p class="meta">—</p>
-            <div class="blog-content">
-              <p>Click a post on the left to read the full note rendered directly from Markdown.</p>
+        <div class="blog-layout">
+          <main class="blog-main">
+            <div id="blog-home" class="blog-home">
+              <div class="blog-tools">
+                <input id="blog-search" class="blog-search" type="search" placeholder="Search posts" aria-label="Search blog posts" autocomplete="off" />
+              </div>
+              <p id="blog-result-note" class="meta blog-result-note"></p>
+              <div id="blog-feed" class="blog-feed"></div>
             </div>
-          </article>
+
+            <article id="blog-article" class="blog-article" hidden>
+              <button id="blog-back" class="blog-back" type="button">Back to Blog</button>
+              <header class="article-header">
+                <p class="meta" id="blog-article-meta">—</p>
+                <h1 id="blog-article-title">Select a post</h1>
+                <div id="blog-current-tags" class="post-tags"></div>
+              </header>
+              <nav id="blog-toc" class="blog-toc" aria-label="Post contents"></nav>
+              <div class="blog-content"></div>
+            </article>
+          </main>
+
+          <aside id="blog-sidebar" class="blog-sidebar" aria-label="Blog navigation">
+            <section class="sidebar-panel profile-panel">
+              <img src="assets/avatar.jpg" alt="Xiyu Zhou" />
+              <div>
+                <h3>Xiyu Zhou</h3>
+                <p>Notes on AI, research, tools, and building this personal page.</p>
+              </div>
+            </section>
+            <section class="sidebar-panel">
+              <h3>Categories</h3>
+              <div id="blog-categories" class="sidebar-links"></div>
+            </section>
+            <section class="sidebar-panel">
+              <h3>Tags</h3>
+              <div id="blog-tags" class="sidebar-tags"></div>
+            </section>
+            <section class="sidebar-panel">
+              <h3>Archive</h3>
+              <div id="blog-archive" class="sidebar-links"></div>
+            </section>
+            <section class="sidebar-panel">
+              <h3>Recent</h3>
+              <div id="blog-recent" class="sidebar-links"></div>
+            </section>
+          </aside>
         </div>
       </section>
     </div>

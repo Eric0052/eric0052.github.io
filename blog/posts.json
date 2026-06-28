@@ -1,8 +1,21 @@
 [
   {
-    "title": "How to Quickly Build a Personal Website Using AI ",
+    "id": "rope-position-encoding",
+    "title": "RoPE 位置编码：为什么大模型需要“知道顺序”",
+    "date": "2026-06-28",
+    "category": "LLM Notes",
+    "tags": ["Transformer", "Position Encoding", "RoPE", "Happy-LLM"],
+    "summary": "从正余弦位置编码出发，记录 RoPE 旋转位置编码的直觉、公式和它对注意力计算的改进。",
+    "file": "blog/Repo位置编码.md"
+  },
+  {
+    "id": "build-personal-website-with-ai",
+    "title": "How to Quickly Build a Personal Website Using AI",
     "date": "2025-11-15",
-    "file": "blog/How-to-Quickly-Build-a-Personal-Website-Using-AI.md"
+    "category": "Personal Website",
+    "tags": ["AI", "Cursor", "GitHub Pages"],
+    "summary": "A short note on building and deploying a personal website with AI tools.",
+    "file": "blog/How-to-Quickly-Build-a-Personal-Website-Using-AI.md.md"
   }
 ]
 
