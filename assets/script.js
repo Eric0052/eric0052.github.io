@@ -226,6 +226,31 @@
       return markdown.replace(/^---\s*[\r\n]+[\s\S]*?[\r\n]+---\s*[\r\n]?/, "");
     }
 
+    function renderMarkdown(markdown) {
+      const mathSegments = [];
+      const stashMath = (match) => {
+        const token = `MATHSEGMENT${mathSegments.length}TOKEN`;
+        mathSegments.push(match);
+        return token;
+      };
+
+      const protectedMarkdown = markdown
+        .replace(/\$\$[\s\S]*?\$\$/g, stashMath)
+        .replace(/(^|[^$])\$([^$\n]+?)\$(?!\$)/g, (match, prefix, content) => `${prefix}${stashMath(`$${content}$`)}`);
+
+      let html = window.marked ? window.marked.parse(protectedMarkdown) : protectedMarkdown;
+      mathSegments.forEach((math, index) => {
+        const token = `MATHSEGMENT${index}TOKEN`;
+        const block = math.startsWith("$$")
+          ? `<div class="math-display">${math}</div>`
+          : `<span class="math-inline">${math}</span>`;
+        html = html.replace(new RegExp(`<p>${token}</p>`, "g"), block);
+        html = html.replace(new RegExp(token, "g"), block);
+      });
+
+      return html;
+    }
+
     function setRoute(hash, replace = false) {
       const url = hash ? `${window.location.pathname}${hash}` : window.location.pathname;
       if (replace) {
@@ -454,7 +479,7 @@
       try {
         const markdown = await fetchMarkdown(post.file);
         const content = stripFrontMatter(markdown);
-        articleView.querySelector(".blog-content").innerHTML = window.marked ? window.marked.parse(content) : content;
+        articleView.querySelector(".blog-content").innerHTML = renderMarkdown(content);
         renderTableOfContents(post);
         typesetMath();
       } catch (error) {

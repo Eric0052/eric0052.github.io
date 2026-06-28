@@ -619,6 +619,13 @@ header.navbar::after {
   margin-top: 1rem;
 }
 
+.math-display {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.2rem 0;
+}
+
 .blog-content h1,
 .blog-content h2,
 .blog-content h3 {

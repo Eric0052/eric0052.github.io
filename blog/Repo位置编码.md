@@ -246,38 +246,7 @@ R(m\theta_i)
 \end{bmatrix}
 $$
 
-如果把这个块对角矩阵展开来看，大概就是下面这样：
-
-$$
-\begin{bmatrix}
-x_0' \\
-x_1' \\
-x_2' \\
-x_3' \\
-\vdots \\
-x_{d-2}' \\
-x_{d-1}'
-\end{bmatrix}
-=
-\begin{bmatrix}
-\cos(m\theta_0) & -\sin(m\theta_0) & 0 & 0 & \cdots & 0 & 0 \\
-\sin(m\theta_0) & \cos(m\theta_0) & 0 & 0 & \cdots & 0 & 0 \\
-0 & 0 & \cos(m\theta_1) & -\sin(m\theta_1) & \cdots & 0 & 0 \\
-0 & 0 & \sin(m\theta_1) & \cos(m\theta_1) & \cdots & 0 & 0 \\
-\vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
-0 & 0 & 0 & 0 & \cdots & \cos(m\theta_{\frac{d}{2}-1}) & -\sin(m\theta_{\frac{d}{2}-1}) \\
-0 & 0 & 0 & 0 & \cdots & \sin(m\theta_{\frac{d}{2}-1}) & \cos(m\theta_{\frac{d}{2}-1})
-\end{bmatrix}
-\begin{bmatrix}
-x_0 \\
-x_1 \\
-x_2 \\
-x_3 \\
-\vdots \\
-x_{d-2} \\
-x_{d-1}
-\end{bmatrix}
-$$
+如果把这个块对角矩阵完全展开，会得到一个很长的稀疏矩阵。它本质上只是在每一组二维维度里重复应用上面的旋转矩阵，所以这里不把完整大矩阵写出来，直接看任意一组维度的更新方式会更清楚。
 
 也就是说，对于任意一组维度$(x_{2i}, x_{2i+1})$，它的更新方式是：
 
