@@ -4,9 +4,9 @@
       "id": "tosem-llm-dr",
       "title": "Using LLMs in Generating Design Rationale for Software Architecture Decisions",
       "authors": "Xiyu Zhou, Ruiyin Li, Peng Liang, Beiqi Zhang, Mojtaba Shahin, Zengyang Li, Chen Yang",
-      "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM)",
-      "status": "Accepted for publication",
-      "year": 2025,
+      "venue": "ACM Transactions on Software Engineering and Methodology (TOSEM), 35(8), 1–38",
+      "status": "Published",
+      "year": 2026,
       "links": {
         "URL": "https://dl.acm.org/doi/10.1145/3785010"
       }
